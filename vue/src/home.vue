@@ -1,0 +1,16 @@
+<template>
+  <div id="home">
+    <router-link to="/infiniteScroll">infiniteScroll</router-link>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'home'
+}
+</script>
+<style lang="less" scoped>
+  #home {
+    padding: 100px 0px 0px 0px;
+  }
+</style>

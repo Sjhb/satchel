@@ -1,0 +1,5 @@
+.vscode/
+.idea/
+vue/dist/
+vue/node_modules/
+.DS_Store
