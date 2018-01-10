@@ -21,4 +21,4 @@ npm run build --report
 ### VUE COMPONOENT
 
 - infiniteScroll 滑动加载组件
-
+- checkbox 多选按钮
