@@ -1,6 +1,7 @@
 <template>
   <div id="home">
-    <router-link to="/infiniteScroll">infiniteScroll</router-link>
+    <router-link to="/infiniteScroll">infiniteScroll</router-link><br>
+    <router-link to="/checkbox">checkbox</router-link>
   </div>
 </template>
 
