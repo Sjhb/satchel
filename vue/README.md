@@ -1,4 +1,4 @@
-## VUE COMPONOENT
+## COMMON
 
 一些自己写的业务组件，Webpack、Vue环境都是自己搭的
 
@@ -18,7 +18,7 @@ npm run build
 npm run build --report
 ```
 
-### 组件
+### VUE COMPONOENT
 
 - infiniteScroll 滑动加载组件
 
