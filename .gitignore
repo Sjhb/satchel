@@ -2,4 +2,5 @@
 .idea/
 vue/dist/
 vue/node_modules/
+vue/package-lock.json
 .DS_Store
