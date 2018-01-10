@@ -1,4 +1,4 @@
-.w-checkbox-define {
+.w-radio-define {
   position: relative;
   margin: 0;
   padding: 0;
@@ -10,7 +10,7 @@
   white-space: nowrap;
   user-select: none;
   font-family:  Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
-  .w-checkbox-span {
+  .w-radio-span {
     white-space: nowrap;
     cursor: pointer;
     outline: none;
@@ -18,7 +18,7 @@
     line-height: 1;
     position: relative;
     vertical-align: middle;
-    .w-checkbox-spaninner {
+    .w-radio-spaninner {
       display: inline-block;
       position: relative;
       border: 1px solid #989898;
@@ -31,7 +31,7 @@
       z-index: 1;
       transition: border-color .25s cubic-bezier(.71,-.46,.29,1.46),background-color .25s cubic-bezier(.71,-.46,.29,1.46);
     }
-    .w-checkbox-spaninner:after {
+    .w-radio-spaninner:after {
       box-sizing: content-box;
       content: "";
       border: 1px solid #fff;
@@ -46,17 +46,17 @@
       transition: transform .15s cubic-bezier(.71,-.46,.88,.6) .05s;
       transform-origin: center;
     }
-    .w-checkbox-spaninner__checked {
+    .w-radio-spaninner__checked {
       background-color: #003865;
       border-color: #003865;
     }
-    .w-checkbox-spaninner__checked:after {
+    .w-radio-spaninner__checked:after {
       transform: rotate(45deg) scaleY(1);
     }
-    .w-checkbox-spaninner__circle {
+    .w-radio-spaninner__circle {
       border-radius: 50%;
     }
-    .w-checkbox-input {
+    .w-radio-input {
       opacity: 0;
       outline: none;
       position: absolute;
@@ -65,35 +65,35 @@
       height: 0;
     }
   }
-  .w-checkbox-label {
+  .w-radio-label {
     display: inline-block;
   }
 }
-.w-checkbox-define__disabled {
+.w-radio-define__disabled {
   cursor: not-allowed;
-  .w-checkbox-span {
+  .w-radio-span {
     cursor: not-allowed;
-    .w-checkbox-spaninner {
+    .w-radio-spaninner {
       cursor: not-allowed;
       background-color: #f2f6fc;
       border-color: #dcdfe6;
     }
-    .w-checkbox-spaninner:after {
+    .w-radio-spaninner:after {
       border-color: #c0c4cc;
     }
   }
-  .w-checkbox-label {
+  .w-radio-label {
     cursor: not-allowed;
     color: #c0c4cc;
   }
 }
-.w-checkbox-define__danger {
-  .w-checkbox-span {
-    .w-checkbox-spaninner {
+.w-radio-define__danger {
+  .w-radio-span {
+    .w-radio-spaninner {
       border-color: #ff4949;
       background-color: #fff;
     }
-    .w-checkbox-spaninner__checked {
+    .w-radio-spaninner__checked {
       background-color: #ff4949;
     }
   }

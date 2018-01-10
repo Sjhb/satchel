@@ -5,67 +5,71 @@
 *
 * 滑动加载组件功能：
 * ## 是否禁用当前组件：disabled
-* ## 状态绑定：是否选中
+* ## 状态绑定：选中项
 * ## 形状圆形、正方形
 * ## 警告状态：danger
 */
 
 export default {
-  name: 'vueCheckbox',
+  name: 'vueRadio',
   props: {
     disabled: Boolean,
-    checked: Boolean,
-    value: String,
+    label: String,
     circle: Boolean,
-    danger: Boolean
+    danger: Boolean,
+    name: String,
+    value: String
   },
   data () {
     return {}
   },
-  model: {
-    prop: 'checked',
-    event: 'change'
+  computed: {
+    checked () {
+      return this.label === this.value
+    }
   },
   render (h) {
     const self = this
     return h('label', {
       'class': {
-        'w-checkbox-define': true,
-        'w-checkbox-define__disabled': self.disabled,
-        'w-checkbox-define__danger': self.danger
+        'w-radio-define': true,
+        'w-radio-define__disabled': self.disabled,
+        'w-radio-define__danger': self.danger
       }
     }, [
       h('span', {
         attrs: {
-          'class': 'w-checkbox-span'
+          'class': 'w-radio-span'
         }
       }, [
         h('span', {
           attrs: {
           },
           'class': {
-            'w-checkbox-spaninner__checked': self.checked,
-            'w-checkbox-spaninner': true,
-            'w-checkbox-spaninner__circle': self.circle
+            'w-radio-spaninner__checked': self.checked,
+            'w-radio-spaninner': true,
+            'w-radio-spaninner__circle': self.circle
           }
         }),
         h('input', {
           attrs: {
-            'class': 'w-checkbox-input',
-            type: 'checkbox',
+            'class': 'w-radio-input',
+            type: 'radio',
             checked: self.checked,
-            disabled: self.disabled
+            disabled: self.disabled,
+            name: self.name,
+            value: self.label
           },
           on: {
             change (event) {
-              self.$emit('change', event.target.checked)
+              self.$emit('input', event.target.value)
             }
           }
         }, [])
       ]),
       h('span', {
         attrs: {
-          'class': 'w-checkbox-label'
+          'class': 'w-radio-label'
         }
       }, this.$slots.default)
     ])

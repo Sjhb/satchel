@@ -22,3 +22,4 @@ npm run build --report
 
 - infiniteScroll 滑动加载组件
 - checkbox 多选按钮
+- radio 单选按钮
